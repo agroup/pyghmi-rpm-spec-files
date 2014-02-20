@@ -3,12 +3,12 @@
 
 Name:           python-%{lpypi_name}
 Version:        0.5.8
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        Python General Hardware Management Initiative (IPMI and others)
 
-License:        Apache-2.0
+License:        ASL 2.0
 URL:            http://xcat.sf.net/
-Source0:        http://pypi.python.org/packages/source/W/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        http://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python-devel

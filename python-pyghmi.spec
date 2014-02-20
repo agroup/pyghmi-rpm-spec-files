@@ -2,7 +2,7 @@
 %global lpypi_name pyghmi
 
 Name:           python-%{lpypi_name}
-Version:        0.5.8
+Version:        0.5.9
 Release:        1%{?dist}
 Summary:        Python General Hardware Management Initiative (IPMI and others)
 
@@ -11,17 +11,13 @@ URL:            http://xcat.sf.net/
 Source0:        http://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python-devel
+BuildRequires:  python2-devel
 BuildRequires:  python-pbr
-BuildRequires:  python-subunit
-BuildRequires:  python-setuptools
-BuildRequires:  python-testrepository
 
-Requires:       python-pbr
 Requires:       python-crypto >= 2.6
 
 %description
-This is a pure python implementation of IPMI protocol.
+This is a pure python implementation of the IPMI protocol.
 
 
 %prep
@@ -38,8 +34,10 @@ This is a pure python implementation of IPMI protocol.
 
 %files
 %doc README LICENSE
-%{python_sitelib}
+%{python_sitelib}/pyghmi
+%{python_sitelib}/*.egg-info
+
 
 %changelog
-* Wed Mar 13 2013 Lucas Alvares Gomes <lucasagomes@gmail.com> - 0.5.8-1
+* Thu Feb 20 2014 Lucas Alvares Gomes <lucasagomes@gmail.com> - 0.5.9-1
 - Initial package.
